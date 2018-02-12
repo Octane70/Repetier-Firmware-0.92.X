@@ -1,0 +1,1 @@
+Repetier-Firmware-0.92.X Optimized for Afinibot A3 3D Printer
