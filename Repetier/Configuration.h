@@ -65,7 +65,7 @@
 #define DRIVE_SYSTEM 0
 #define XAXIS_STEPS_PER_MM 100
 #define YAXIS_STEPS_PER_MM 100
-#define ZAXIS_STEPS_PER_MM 1600
+#define ZAXIS_STEPS_PER_MM 2560
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
 #define PDM_FOR_COOLER 0
@@ -181,7 +181,7 @@
 #define MIN_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MIN true
 #define ENDSTOP_Z_MIN_INVERTING true
-#define MIN_HARDWARE_ENDSTOP_Z true
+#define MIN_HARDWARE_ENDSTOP_Z false
 #define ENDSTOP_PULLUP_X_MAX true
 #define ENDSTOP_X_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_X false
@@ -263,7 +263,7 @@
 #define HOMING_FEEDRATE_X 100
 #define HOMING_FEEDRATE_Y 100
 #define HOMING_FEEDRATE_Z 1
-#define HOMING_ORDER HOME_ORDER_XYZ
+#define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
 #define ZHOME_HEAT_HEIGHT 20
@@ -349,29 +349,29 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
-#define UI_BED_COATING 1
-#define FEATURE_Z_PROBE 0
-#define Z_PROBE_BED_DISTANCE 10
-#define Z_PROBE_PIN -1
+#define UI_BED_COATING 0
+#define FEATURE_Z_PROBE 1
+#define Z_PROBE_BED_DISTANCE 8
+#define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 0
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET 0
-#define Z_PROBE_Y_OFFSET 0
+#define Z_PROBE_X_OFFSET 23
+#define Z_PROBE_Y_OFFSET -42
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
-#define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 40
+#define Z_PROBE_REPETITIONS 2
+#define Z_PROBE_HEIGHT 10
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define FEATURE_AUTOLEVEL 1
-#define Z_PROBE_X1 20
-#define Z_PROBE_Y1 20
-#define Z_PROBE_X2 160
-#define Z_PROBE_Y2 20
-#define Z_PROBE_X3 100
-#define Z_PROBE_Y3 160
+#define Z_PROBE_X1 60
+#define Z_PROBE_Y1 30
+#define Z_PROBE_X2 200
+#define Z_PROBE_Y2 30
+#define Z_PROBE_X3 60
+#define Z_PROBE_Y3 200
 #define BENDING_CORRECTION_A 0
 #define BENDING_CORRECTION_B 0
 #define BENDING_CORRECTION_C 0
@@ -403,8 +403,9 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_FR_ACTIVE 0
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
-#define UI_PRINTER_NAME "RepRap"
-#define UI_PRINTER_COMPANY "Home made"
+#define UI_PRINTER_NAME "Prusa i3"
+#define	UI_FIRWWARE_VERSION	"Repetier 1.0.0"
+#define UI_PRINTER_COMPANY "Afinibot"
 #define UI_PAGES_DURATION 4000
 #define UI_ANIMATION 0
 #define UI_SPEEDDEPENDENT_POSITIONING 0
@@ -652,7 +653,7 @@ Values must be in range 1..255
     "hasHeatedBed": "1",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
-    "homeOrder": "HOME_ORDER_XYZ",
+    "homeOrder": "HOME_ORDER_ZXY",
     "featureController": 0,
     "uiPrinterName": "RepRap",
     "uiPrinterCompany": "Home made",
